@@ -43,7 +43,7 @@ public class settings extends AppCompatActivity {
     }
 
     private void restartAllActivities() {
-        Intent intent = new Intent(this, startmenu.class);
+        Intent intent = new Intent(this, settings.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
         finish();

@@ -41,4 +41,8 @@ public class game extends AppCompatActivity {
         recreate();
     }
 
+    public void btn_settings(View view) {
+        Intent intent = new Intent(game.this, settings.class);
+        startActivity(intent);
+    }
 }

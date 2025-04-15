@@ -12,6 +12,24 @@
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme" />
 
+
+
+    <ImageButton
+        android:id="@+id/imsettings"
+        android:onClick="btn_settings"
+        android:layout_width="64dp"
+        android:layout_height="69dp"
+        android:layout_alignBottom="@+id/materialToolbar2"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="275dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="3dp"
+        android:layout_toEndOf="@+id/imback"
+        android:backgroundTint="@android:color/transparent"
+        app:srcCompat="@drawable/baseline_settings_24" />
+
     <ImageButton
         android:id="@+id/imback"
         android:onClick="btn_back"
@@ -19,5 +37,5 @@
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:backgroundTint="@android:color/transparent"
-        app:srcCompat="@android:drawable/ic_menu_revert" />
+        app:srcCompat="@drawable/baseline_apps_24" />
 </RelativeLayout>

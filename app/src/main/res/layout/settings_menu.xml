@@ -19,7 +19,7 @@
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:backgroundTint="@android:color/transparent"
-        app:srcCompat="@android:drawable/ic_menu_revert" />
+        app:srcCompat="@drawable/baseline_apps_24" />
 
     <RadioGroup
         android:id="@+id/RadioGroup"
