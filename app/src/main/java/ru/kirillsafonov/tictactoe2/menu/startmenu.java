@@ -21,6 +21,8 @@ public class startmenu extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.start);
+        // Применяем сохранённую тему при запуске приложения
+        themehelper.setTheme(this, themehelper.getTheme(this));
 
         //инициализация кнопок
         play = findViewById(R.id.play_button);
