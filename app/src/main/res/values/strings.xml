@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Tic Tac Toe 2</string>
+    <string name="play">Играть</string>
+    <string name="settings">Настройки</string>
+    <string name="greetings">Добро пожаловать в Tic Tac Toe 2!!!</string>
+    <string name="author">KirillK54</string>
+    <string name="textstn">Настройки</string>
+    <string name="auto_theme">Автоматическая тема</string>
+    <string name="day_theme">Светлая тема</string>
+    <string name="night_theme">Тёмная тема</string>
 </resources>
