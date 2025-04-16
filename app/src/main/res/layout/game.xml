@@ -141,12 +141,24 @@
 
     <TextView
         android:id="@+id/player_winner"
-        android:layout_margin="5dp"
         android:text=""
+        android:layout_margin="110dp"
+        android:textSize="28sp"
         android:textColor="@color/purple_700"
         android:layout_centerInParent="true"
-        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/restart"
+        android:onClick="btn_rest"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:textSize="30sp"
+        android:layout_margin="70dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/restart" />
 
 </RelativeLayout>

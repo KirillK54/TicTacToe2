@@ -27,8 +27,7 @@ public class game extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.game);
 
-        cross = "X";
-        zero = "0";
+
 
         button1 = findViewById(R.id.button1);
         button2 = findViewById(R.id.button2);
@@ -40,6 +39,10 @@ public class game extends AppCompatActivity {
         button8 = findViewById(R.id.button8);
         button9 = findViewById(R.id.button9);
         playerwinner = findViewById(R.id.player_winner);
+
+        cross = "X";
+        zero = "0";
+        playerwinner.setText("");
     }
 
     public void btn_back(View view) {
@@ -71,58 +74,85 @@ public class game extends AppCompatActivity {
     }
 
     public void btn1(View view) {
-        if(button1.getText()==""){
+        if(button1.getText()=="" && playerwinner.getText()==""){
         button1.setText(cross);
-        AI();
-        isPlayerWinner();}
+        isPlayerWinner();
+            if (playerwinner.getText() == "") {
+                AI();
+            }
+        }
     }
     public void btn2(View view) {
-        if(button2.getText()==""){
+        if(button2.getText()=="" && playerwinner.getText()==""){
         button2.setText(cross);
-        AI();
-        isPlayerWinner();}
+        isPlayerWinner();
+            if (playerwinner.getText() == "") {
+                AI();
+            }
+        }
     }
     public void btn3(View view) {
-        if(button3.getText()==""){
+        if(button3.getText()=="" && playerwinner.getText()==""){
         button3.setText(cross);
-        AI();
-        isPlayerWinner();}
+        isPlayerWinner();
+            if (playerwinner.getText() == "") {
+                AI();
+            }
+        }
     }
     public void btn4(View view) {
-        if(button4.getText()==""){
+        if(button4.getText()=="" && playerwinner.getText()==""){
         button4.setText(cross);
-        AI();
-        isPlayerWinner();}
+        isPlayerWinner();
+            if (playerwinner.getText() == "") {
+                AI();
+            }
+        }
     }
     public void btn5(View view) {
-        if(button5.getText()==""){
+        if(button5.getText()=="" && playerwinner.getText()==""){
         button5.setText(cross);
-        AI();
-        isPlayerWinner();}
+        isPlayerWinner();
+            if (playerwinner.getText() == "") {
+                AI();
+            }
+        }
     }
     public void btn6(View view) {
-        if(button6.getText()==""){
+        if(button6.getText()=="" && playerwinner.getText()==""){
         button6.setText(cross);
-        AI();
-        isPlayerWinner();}
+        isPlayerWinner();
+            if (playerwinner.getText() == "") {
+                AI();
+            }
+        }
     }
     public void btn7(View view) {
-        if(button7.getText()==""){
+        if(button7.getText()=="" && playerwinner.getText()==""){
         button7.setText(cross);
-        AI();
-        isPlayerWinner();}
+        isPlayerWinner();
+            if (playerwinner.getText() == "") {
+                AI();
+            }
+        }
     }
     public void btn8(View view) {
-        if(button8.getText()==""){
+        if(button8.getText()=="" && playerwinner.getText()==""){
         button8.setText(cross);
-        AI();
-        isPlayerWinner();}
+        isPlayerWinner();
+            if (playerwinner.getText() == "") {
+                AI();
+            }
+        }
     }
     public void btn9(View view) {
-        if(button9.getText()==""){
+        if(button9.getText()=="" && playerwinner.getText()==""){
         button9.setText(cross);
-        AI();
-        isPlayerWinner();}
+        isPlayerWinner();
+            if (playerwinner.getText() == "") {
+                AI();
+            }
+        }
     }
 
     public void isPlayerWinner() {
@@ -214,4 +244,16 @@ public class game extends AppCompatActivity {
     }
 
 
+    public void btn_rest(View view) {
+        button1.setText("");
+        button2.setText("");
+        button3.setText("");
+        button4.setText("");
+        button5.setText("");
+        button6.setText("");
+        button7.setText("");
+        button8.setText("");
+        button9.setText("");
+        playerwinner.setText("");
+    }
 }
