@@ -21,7 +21,9 @@ public class game extends AppCompatActivity {
     Button button1, button2, button3, button4, button5, button6, button7, button8, button9;
 
     String cross, zero;
-    TextView playerwinner;
+    TextView playerwinner, player_point, ai_point;
+
+    int pointplayer, pointai;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,7 +40,10 @@ public class game extends AppCompatActivity {
         button7 = findViewById(R.id.button7);
         button8 = findViewById(R.id.button8);
         button9 = findViewById(R.id.button9);
+
         playerwinner = findViewById(R.id.player_winner);
+        player_point = findViewById(R.id.player_point);
+        ai_point = findViewById(R.id.ai_point);
 
         cross = "X";
         zero = "0";
@@ -158,53 +163,89 @@ public class game extends AppCompatActivity {
     public void isPlayerWinner() {
         if (button1.getText() == cross && button2.getText() == cross && button3.getText() == cross) {
             playerwinner.setText(R.string.player_winner);
-        }
+            pointplayer++;
+            player_point.setText(""+pointplayer);
+        } else
         if (button4.getText() == cross && button5.getText() == cross && button6.getText() == cross) {
             playerwinner.setText(R.string.player_winner);
-        }
+            pointplayer++;
+            player_point.setText(""+pointplayer);
+        }else
         if (button7.getText() == cross && button8.getText() == cross && button9.getText() == cross) {
             playerwinner.setText(R.string.player_winner);
-        }
+            pointplayer++;
+            player_point.setText(""+pointplayer);
+        }else
         if (button1.getText() == cross && button4.getText() == cross && button7.getText() == cross) {
             playerwinner.setText(R.string.player_winner);
-        }
+            pointplayer++;
+            player_point.setText(""+pointplayer);
+        }else
         if (button2.getText() == cross && button5.getText() == cross && button8.getText() == cross) {
             playerwinner.setText(R.string.player_winner);
-        }
+            pointplayer++;
+            player_point.setText(""+pointplayer);
+        }else
         if (button3.getText() == cross && button6.getText() == cross && button9.getText() == cross) {
             playerwinner.setText(R.string.player_winner);
-        }
+            pointplayer++;
+            player_point.setText(""+pointplayer);
+        }else
         if (button1.getText() == cross && button5.getText() == cross && button9.getText() == cross) {
             playerwinner.setText(R.string.player_winner);
-        }
+            pointplayer++;
+            player_point.setText(""+pointplayer);
+        }else
         if (button3.getText() == cross && button5.getText() == cross && button7.getText() == cross) {
             playerwinner.setText(R.string.player_winner);
+            pointplayer++;
+            player_point.setText(""+pointplayer);
+        } else if (button1.getText() != "" && button2.getText() != "" && button3.getText() != "" &&
+                   button4.getText() != "" && button5.getText() != "" && button6.getText() != "" &&
+                   button7.getText() != "" && button8.getText() != "" && button9.getText() != "") {
+            playerwinner.setText(R.string.draw);
         }
     }
     public void isAIWinner() {
         if (button1.getText() == zero && button2.getText() == zero && button3.getText() == zero) {
             playerwinner.setText(R.string.ai_winner);
-        }
+            pointai++;
+            ai_point.setText(""+pointai);
+        }else
         if (button4.getText() == zero && button5.getText() == zero && button6.getText() == zero) {
             playerwinner.setText(R.string.ai_winner);
-        }
+            pointai++;
+            ai_point.setText(""+pointai);
+        }else
         if (button7.getText() == zero && button8.getText() == zero && button9.getText() == zero) {
             playerwinner.setText(R.string.ai_winner);
-        }
+            pointai++;
+            ai_point.setText(""+pointai);
+        }else
         if (button1.getText() == zero && button4.getText() == zero && button7.getText() == zero) {
             playerwinner.setText(R.string.ai_winner);
-        }
+            pointai++;
+            ai_point.setText(""+pointai);
+        }else
         if (button2.getText() == zero && button5.getText() == zero && button8.getText() == zero) {
             playerwinner.setText(R.string.ai_winner);
-        }
+            pointai++;
+            ai_point.setText(""+pointai);
+        }else
         if (button3.getText() == zero && button6.getText() == zero && button9.getText() == zero) {
             playerwinner.setText(R.string.ai_winner);
-        }
+            pointai++;
+            ai_point.setText(""+pointai);
+        }else
         if (button1.getText() == zero && button5.getText() == zero && button9.getText() == zero) {
             playerwinner.setText(R.string.ai_winner);
-        }
+            pointai++;
+            ai_point.setText(""+pointai);
+        }else
         if (button3.getText() == zero && button5.getText() == zero && button7.getText() == zero) {
             playerwinner.setText(R.string.ai_winner);
+            pointai++;
+            ai_point.setText(""+pointai);
         }
     }
     public void AI() {
@@ -213,34 +254,33 @@ public class game extends AppCompatActivity {
 
         switch(AIClick) {
             case (1): if (button1.getText() == "") {
-                button1.setText(zero);
-            } else {AI();} break;
+                button1.setText(zero); isAIWinner();
+            } else {AI();}  break;
             case (2): if (button2.getText() == "") {
-                button2.setText(zero);
-            } else {AI();} break;
+                button2.setText(zero); isAIWinner();
+            } else {AI();}  break;
             case (3): if (button3.getText() == "") {
-                button3.setText(zero);
-            } else {AI();} break;
+                button3.setText(zero); isAIWinner();
+            } else {AI();}  break;
             case (4): if (button4.getText() == "") {
-                button4.setText(zero);
-            } else {AI();} break;
+                button4.setText(zero); isAIWinner();
+            } else {AI();}  break;
             case (5): if (button5.getText() == "") {
-                button5.setText(zero);
-            } else {AI();} break;
+                button5.setText(zero); isAIWinner();
+            } else {AI();}  break;
             case (6): if (button6.getText() == "") {
-                button6.setText(zero);
-            } else {AI();} break;
+                button6.setText(zero); isAIWinner();
+            } else {AI();}  break;
             case (7): if (button7.getText() == "") {
-                button7.setText(zero);
-            } else {AI();} break;
+                button7.setText(zero); isAIWinner();
+            } else {AI();}  break;
             case (8): if (button8.getText() == "") {
-                button8.setText(zero);
-            } else {AI();} break;
+                button8.setText(zero); isAIWinner();
+            } else {AI();}  break;
             case (9): if (button9.getText() == "") {
-                button9.setText(zero);
-            } else {AI();} break;
+                button9.setText(zero); isAIWinner();
+            } else {AI();}  break;
         }
-        isAIWinner();
     }
 
 

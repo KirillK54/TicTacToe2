@@ -11,4 +11,5 @@
     <string name="player_winner">Поздравляю с победой!!!</string>
     <string name="ai_winner">Терминатор победил!!!</string>
     <string name="restart">Перезапуск</string>
+    <string name="draw">Хммм.... Ничья....</string>
 </resources>
